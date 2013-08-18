@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 "
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'travisj/pbcopy.vim'
 Bundle 'msanders/snipmate.vim'
@@ -128,3 +128,10 @@ nmap <F4> :w<CR>:make<CR>:cw<CR>
 
 
 let g:ctrlp_max_height = 30
+
+" airline config
+let g:airline_left_sep='»'
+let g:airline_right_sep='«'
+let g:airline_branch_prefix='⎇ '
+let g:airline_enable_branch = 1
+let g:airline_branch_empty_message = '[no branch]'
