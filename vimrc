@@ -12,17 +12,17 @@ Bundle 'gmarik/vundle'
 "
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'travisj/pbcopy.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
-Bundle 'int3/vim-extradite'
-Bundle 'travisj/vim-jslint'
-Bundle 'bronson/vim-visual-star-search'
-Bundle 'Better-Javascript-Indentation'
-Bundle 'Lokaltog/vim-easymotion'
-
+"Bundle 'int3/vim-extradite'
+"Bundle 'travisj/vim-jslint'
+"Bundle 'bronson/vim-visual-star-search'
+"Bundle 'Better-Javascript-Indentation'
+"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'bling/vim-airline'
 
 syntax on
 filetype plugin on  
@@ -32,7 +32,9 @@ set nocompatible
 set modelines=0
 
 autocmd BufRead,BufNewFile *.phtml set ft=html
+autocmd BufRead,BufNewFile *.tpl set ft=html
 autocmd BufRead,BufNewFile markdown set ft=markdown
+autocmd BufRead,BufNewFile inc set ft=php
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -45,7 +47,7 @@ set smartindent
 set showmatch  
 set number  
 set ruler
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
 set tabstop=2  
 set softtabstop=2  
@@ -77,7 +79,7 @@ nnoremap <CR> <C-^>
 let mapleader = ","
 
 map <leader>a :set wrap!<CR>
-map <leader>b :w<CR>:source ~/.vimrc<CR>:BundleInstall<CR>
+map <leader>b :w<CR>:source ~/.vimrc<CR>:BundleInstall<CR>:source ~/.vimrc<CR>
 map <leader>c :e application/config.php<CR>
 map <leader>k :nohlsearch<CR>  
 map <leader>l :source ~/.vimrc<CR>
