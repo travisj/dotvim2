@@ -66,6 +66,7 @@ set wildmode=list:longest
 set wildignore+=*Zend*,.git,*bundles*,*.un~*
 set undofile
 set shortmess+=I
+set mouse=nicr
 
 set colorcolumn=85
 
@@ -79,10 +80,10 @@ nnoremap <CR> <C-^>
 let mapleader = ","
 
 map <leader>a :set wrap!<CR>
-map <leader>b :w<CR>:source ~/.vimrc<CR>:BundleInstall<CR>:source ~/.vimrc<CR>
+map <leader>b :w<CR>:source ~/.vim/vimrcrc<CR>:BundleInstall<CR>:source ~/.vim/vimrc<CR>
 map <leader>c :e application/config.php<CR>
 map <leader>k :nohlsearch<CR>  
-map <leader>l :source ~/.vimrc<CR>
+map <leader>l :source ~/.vim/vimrc<CR>
 map <leader>e :Extradite<CR>
 map <leader>f :CommandTFlush<CR>
 map <leader>n :set number!<CR>
@@ -92,7 +93,7 @@ map <leader>q :wqa<CR>
 map <leader>r :set relativenumber!<CR>
 map <leader>s :setlocal spell!<CR>
 map <leader>t :CtrlP<CR>
-map <leader>v :e ~/.vimrc<CR>
+map <leader>v :e ~/.vim/vimrc<CR>
 map <leader>w :w<CR>
 map <leader>y y :PBCopy<CR>
 map <leader>= <c-w>=
@@ -120,9 +121,6 @@ let g:syntastic_auto_loc_list=1
 let g:gist_open_browser_after_post = 1
 let g:gist_browser_command = 'ssh local open %URL%'
 
-"source ~/.vimrc-simplenote
-"
-
 " jslint testing
 nmap <F4> :w<CR>:make<CR>:cw<CR>
 
@@ -130,8 +128,8 @@ nmap <F4> :w<CR>:make<CR>:cw<CR>
 let g:ctrlp_max_height = 30
 
 " airline config
-let g:airline_left_sep='»'
-let g:airline_right_sep='«'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
 let g:airline_branch_prefix='⎇ '
 let g:airline_enable_branch = 1
-let g:airline_branch_empty_message = '[no branch]'
+"let g:airline_branch_empty_message = '[no branch]'
