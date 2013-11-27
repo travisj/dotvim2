@@ -14,15 +14,16 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'travisj/pbcopy.vim'
+"Bundle 'travisj/pbcopy.vim'
 Bundle 'msanders/snipmate.vim'
-Bundle 'ervandew/supertab'
+"Bundle 'ervandew/supertab'
 "Bundle 'int3/vim-extradite'
 "Bundle 'travisj/vim-jslint'
 "Bundle 'bronson/vim-visual-star-search'
 "Bundle 'Better-Javascript-Indentation'
 "Bundle 'Lokaltog/vim-easymotion'
 Bundle 'bling/vim-airline'
+Bundle 'Valloric/YouCompleteMe'
 
 syntax on
 filetype plugin on  
@@ -80,7 +81,7 @@ nnoremap <CR> <C-^>
 let mapleader = ","
 
 map <leader>a :set wrap!<CR>
-map <leader>b :w<CR>:source ~/.vim/vimrcrc<CR>:BundleInstall<CR>:source ~/.vim/vimrc<CR>
+map <leader>b :w<CR>:source ~/.vim/vimrc<CR>:BundleInstall<CR>:source ~/.vim/vimrc<CR>
 map <leader>c :e application/config.php<CR>
 map <leader>k :nohlsearch<CR>  
 map <leader>l :source ~/.vim/vimrc<CR>
