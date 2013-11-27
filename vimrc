@@ -22,8 +22,9 @@ Bundle 'msanders/snipmate.vim'
 "Bundle 'bronson/vim-visual-star-search'
 "Bundle 'Better-Javascript-Indentation'
 "Bundle 'Lokaltog/vim-easymotion'
-Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
+"Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 
 syntax on
 filetype plugin on  
@@ -134,3 +135,8 @@ let g:airline_right_sep = '◀'
 let g:airline_branch_prefix='⎇ '
 let g:airline_enable_branch = 1
 "let g:airline_branch_empty_message = '[no branch]'
+
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
