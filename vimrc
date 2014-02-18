@@ -11,11 +11,18 @@ Bundle 'gmarik/vundle'
 " My bundles
 "
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdcommenter'
-"Bundle 'travisj/pbcopy.vim'
 Bundle 'msanders/snipmate.vim'
+Bundle 'bling/vim-airline'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+Bundle 'itchyny/calendar.vim'
+Bundle 'atweiden/vim-dragvisuals'
+"Bundle 'atweiden/vim-vmath'
+"Bundle 'travisj/pbcopy.vim'
 "Bundle 'ervandew/supertab'
 "Bundle 'int3/vim-extradite'
 "Bundle 'travisj/vim-jslint'
@@ -77,6 +84,7 @@ map <C-c> :NERDTreeToggle<CR>
 
 inoremap jj <ESC>
 nnoremap <CR> <C-^>  
+nnoremap ; :
 "nnoremap <C-w> :w<CR>
 
 let mapleader = ","
@@ -140,3 +148,11 @@ let g:airline_enable_branch = 1
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+" dragvisuals
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+let g:DVB_TrimWS = 1
