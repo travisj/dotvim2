@@ -25,6 +25,8 @@ Bundle 'bronson/vim-visual-star-search'
 Bundle 'Valloric/YouCompleteMe'
 "Bundle 'bling/vim-airline'
 Bundle 'itchyny/lightline.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 
 syntax on
 filetype plugin on  
