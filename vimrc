@@ -27,6 +27,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'itchyny/lightline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'sheerun/vim-polyglot'
 
 syntax on
 filetype plugin on  
