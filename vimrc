@@ -26,12 +26,15 @@ Bundle 'atweiden/vim-dragvisuals'
 "Bundle 'ervandew/supertab'
 "Bundle 'int3/vim-extradite'
 "Bundle 'travisj/vim-jslint'
-"Bundle 'bronson/vim-visual-star-search'
+Bundle 'bronson/vim-visual-star-search'
 "Bundle 'Better-Javascript-Indentation'
 "Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
 "Bundle 'bling/vim-airline'
 Bundle 'itchyny/lightline.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'sheerun/vim-polyglot'
 
 syntax on
 filetype plugin on  
