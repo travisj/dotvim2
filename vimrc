@@ -16,11 +16,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
 Bundle 'bling/vim-airline'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
-Bundle 'itchyny/calendar.vim'
-Bundle 'atweiden/vim-dragvisuals'
+"Bundle 'itchyny/calendar.vim'
+"Bundle 'atweiden/vim-dragvisuals'
 "Bundle 'atweiden/vim-vmath'
 "Bundle 'travisj/pbcopy.vim'
 "Bundle 'ervandew/supertab'
@@ -32,9 +31,12 @@ Bundle 'bronson/vim-visual-star-search'
 Bundle 'Valloric/YouCompleteMe'
 "Bundle 'bling/vim-airline'
 Bundle 'itchyny/lightline.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'sheerun/vim-polyglot'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-repeat'
+"Bundle 'sheerun/vim-polyglot'
+"Bundle 'fatih/vim-go'
+Bundle 'othree/html5.vim'
+Bundle 'airblade/vim-gitgutter'
 
 syntax on
 filetype plugin on  
@@ -47,6 +49,7 @@ autocmd BufRead,BufNewFile *.phtml set ft=html
 autocmd BufRead,BufNewFile *.tpl set ft=html
 autocmd BufRead,BufNewFile markdown set ft=markdown
 autocmd BufRead,BufNewFile inc set ft=php
+autocmd BufRead,BufNewFile *.blade.php set ft=html
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -94,7 +97,7 @@ let mapleader = ","
 
 map <leader>a :set wrap!<CR>
 map <leader>b :w<CR>:source ~/.vim/vimrc<CR>:BundleInstall<CR>:source ~/.vim/vimrc<CR>
-map <leader>c :e application/config.php<CR>
+map <leader>c :CtrlPClearCache<CR>
 map <leader>k :nohlsearch<CR>  
 map <leader>l :source ~/.vim/vimrc<CR>
 map <leader>e :Extradite<CR>
@@ -159,3 +162,12 @@ vmap  <expr>  <DOWN>   DVB_Drag('down')
 vmap  <expr>  <UP>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
 let g:DVB_TrimWS = 1
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" don't let the cursor move back one position when leaving insert mode to command mode
+inoremap <silent> <Esc> <C-O>:stopinsert<CR>
