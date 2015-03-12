@@ -14,27 +14,14 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
+Bundle 'travisj/pbcopy.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'bling/vim-airline'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
-"Bundle 'itchyny/calendar.vim'
-"Bundle 'atweiden/vim-dragvisuals'
-"Bundle 'atweiden/vim-vmath'
-"Bundle 'travisj/pbcopy.vim'
-"Bundle 'ervandew/supertab'
-"Bundle 'int3/vim-extradite'
-"Bundle 'travisj/vim-jslint'
 Bundle 'bronson/vim-visual-star-search'
-"Bundle 'Better-Javascript-Indentation'
-"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
-"Bundle 'bling/vim-airline'
 Bundle 'itchyny/lightline.vim'
-"Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-repeat'
-"Bundle 'sheerun/vim-polyglot'
-"Bundle 'fatih/vim-go'
 Bundle 'othree/html5.vim'
 Bundle 'airblade/vim-gitgutter'
 
@@ -56,13 +43,13 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 
+set shell=/bin/zsh
 set autoindent  
 set hlsearch
 set smartindent  
 set showmatch  
 set number  
 set ruler
-"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
 set tabstop=2  
 set softtabstop=2  
@@ -83,7 +70,7 @@ set undofile
 set shortmess+=I
 set mouse=nicr
 
-set colorcolumn=85
+"set colorcolumn=85
 
 let NERDTreeQuitOnOpen=1  
 map <C-c> :NERDTreeToggle<CR>  
@@ -100,8 +87,7 @@ map <leader>b :w<CR>:source ~/.vim/vimrc<CR>:BundleInstall<CR>:source ~/.vim/vim
 map <leader>c :CtrlPClearCache<CR>
 map <leader>k :nohlsearch<CR>  
 map <leader>l :source ~/.vim/vimrc<CR>
-map <leader>e :Extradite<CR>
-map <leader>f :CommandTFlush<CR>
+map <leader>f :! source ~/.zshrc<CR>:! fixagent<CR>
 map <leader>n :set number!<CR>
 map <leader>o :only<CR>
 map <leader>p :set paste!<CR>
