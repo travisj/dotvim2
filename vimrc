@@ -1,12 +1,12 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/vundle/
+set rtp+=~/.vim/Vundle.vim/
 call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My Plugins
 "
@@ -84,7 +84,7 @@ nnoremap ; :
 let mapleader = ","
 
 map <leader>a :set wrap!<CR>
-map <leader>b :w<CR>:source ~/.vim/vimrc<CR>:PluginInstall<CR>:source ~/.vim/vimrc<CR>
+map <leader>b :source ~/.vim/vimrc<CR>:PluginInstall<CR>
 map <leader>c :CtrlPClearCache<CR>
 map <leader>k :nohlsearch<CR>  
 map <leader>l :source ~/.vim/vimrc<CR>
