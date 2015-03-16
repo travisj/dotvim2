@@ -71,8 +71,6 @@ set undofile
 set shortmess+=I
 set mouse=nicr
 
-set colorcolumn=85
-
 let NERDTreeQuitOnOpen=1  
 map <C-c> :NERDTreeToggle<CR>  
 
