@@ -134,22 +134,14 @@ let g:ctrlp_max_height = 30
 " airline config
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
-let g:airline_branch_prefix='⎇ '
-let g:airline_enable_branch = 1
+"let g:airline_symbols.branch = '⎇'
+let g:airline#extensions#branch#enabled = 1
 "let g:airline_branch_empty_message = '[no branch]'
 
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
-
-" dragvisuals
-vmap  <expr>  <LEFT>   DVB_Drag('left')
-vmap  <expr>  <RIGHT>  DVB_Drag('right')
-vmap  <expr>  <DOWN>   DVB_Drag('down')
-vmap  <expr>  <UP>     DVB_Drag('up')
-vmap  <expr>  D        DVB_Duplicate()
-let g:DVB_TrimWS = 1
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
