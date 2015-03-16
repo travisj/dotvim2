@@ -71,8 +71,6 @@ set undofile
 set shortmess+=I
 set mouse=nicr
 
-set colorcolumn=85
-
 let NERDTreeQuitOnOpen=1  
 map <C-c> :NERDTreeToggle<CR>  
 
@@ -142,14 +140,6 @@ let g:airline_enable_branch = 1
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
-
-" dragvisuals
-vmap  <expr>  <LEFT>   DVB_Drag('left')
-vmap  <expr>  <RIGHT>  DVB_Drag('right')
-vmap  <expr>  <DOWN>   DVB_Drag('down')
-vmap  <expr>  <UP>     DVB_Drag('up')
-vmap  <expr>  D        DVB_Duplicate()
-let g:DVB_TrimWS = 1
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
