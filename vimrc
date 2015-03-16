@@ -149,3 +149,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " don't let the cursor move back one position when leaving insert mode to command mode
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
+
+" set for vim-gitgutter
+highlight clear SignColumn
