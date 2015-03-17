@@ -92,7 +92,7 @@ map <leader>n :set number!<CR>
 map <leader>o :only<CR>
 map <leader>p :set paste!<CR>
 map <leader>q :wqa<CR>
-map <leader>r :set relativenumber!<CR>
+map <Leader>r :%s/\<<C-r><C-w>\>/
 map <leader>s :setlocal spell!<CR>
 map <leader>t :CtrlP<CR>
 map <leader>v :e ~/.vim/vimrc<CR>
