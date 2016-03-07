@@ -41,9 +41,6 @@ autocmd BufRead,BufNewFile *.blade.php set ft=html
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-au BufRead,BufNewFile *.pde set filetype=arduino
-au BufRead,BufNewFile *.ino set filetype=arduino
-
 set autoindent  
 set hlsearch
 set smartindent  
@@ -69,7 +66,8 @@ set wildmode=list:longest
 set wildignore+=*Zend*,.git,*bundles*,*.un~*
 set undofile
 set shortmess+=I
-set mouse=nicr
+set mouse=
+"set clipboard=unnamedplus
 
 let NERDTreeQuitOnOpen=1  
 map <C-c> :NERDTreeToggle<CR>  
@@ -77,6 +75,7 @@ map <C-c> :NERDTreeToggle<CR>
 inoremap jj <ESC>
 nnoremap <CR> <C-^>  
 nnoremap ; :
+nnoremap p ]p
 "nnoremap <C-w> :w<CR>
 
 let mapleader = ","
@@ -120,9 +119,6 @@ let g:sparkupExecuteMapping='<c-g>'
 "SyntasticEnable php
 let g:syntastic_auto_loc_list=1
 
-let g:gist_open_browser_after_post = 1
-let g:gist_browser_command = 'ssh local open %URL%'
-
 " jslint testing
 nmap <F4> :w<CR>:make<CR>:cw<CR>
 
@@ -141,11 +137,6 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-" If you prefer the Omni-Completion tip window to close when a selection is
-" made, these lines close it on movement in insert mode or when leaving
-" insert mode
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " don't let the cursor move back one position when leaving insert mode to command mode
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
